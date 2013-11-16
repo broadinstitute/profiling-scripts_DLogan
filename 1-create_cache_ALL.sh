@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./SETTINGS.sh
+source ./0-0-SETTINGS.sh
 #DBROOT=Expt_2011_12_20_44plates_BrightGph
 #DATESTAMP=2013_07_17
 #DDIR=../data/${DATESTAMP}_${DBROOT}
