@@ -8,16 +8,6 @@
 #      You need the 'dot space dot slash' to get it into the shell.
 #
 
-## cytominr not used here ##
-#echo Getting cytominr
-#git clone git@github.com:broadinstitute/cytominr.git
-#cd cytominr/
-### July 2012, from Shantanu's Mitochondria attempt
-##git checkout 72565b4e40e016d28ecad677fdc2f44c6bf65d56
-### April 2013
-#git checkout 40806d7ac3e1b2024984c53bd6b2687e69e4a9a3
-#cd ..
-
 ## Add CPA directory to PYTHONPATH
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]
 then
@@ -27,6 +17,16 @@ else
     echo "script ${BASH_SOURCE[0]} is being sourced. Good!"
     export PYTHONPATH=$(pwd)/CellProfiler-Analyst/:$PYTHONPATH
 fi
+
+echo Getting cytominr
+git clone git@github.com:broadinstitute/cytominr.git
+cd cytominr/
+## July 2012, from Shantanu's Mitochondria attempt
+#git checkout 72565b4e40e016d28ecad677fdc2f44c6bf65d56
+## April 2013
+#git checkout 40806d7ac3e1b2024984c53bd6b2687e69e4a9a3
+git checkout ## Most recent version
+cd ..
 
 echo Getting CPA profiling tools
 git clone git@github.com:CellProfiler/CellProfiler-Analyst.git
